@@ -1,0 +1,26 @@
+<html>
+    <body>
+        {% include "superior/barra.html" %}
+    <h2 style="color:red" >
+    hola mundo para todos 
+    </h2>
+    {# COMENTARIO #}
+    {% if  elteme == 'dany' %}
+    <p>el curso lo dicta el master </p>
+    {% else %}
+    <p> el curso lo dicta el ingeniero </p>
+    {% endif %}
+    <p>el nombre del profesor es : {{nombre_persona|upper}}</p>
+    <p>el apellido del profesor es : {{apellido_persona}}</p>
+    <p>la hora es : {{h_actual.year}}</p>
+    <p>el dia es : {{h_actual.day}}</p>
+    <p><strong> listado de personas: </strong></p>
+        <ul>
+       {% for elteme in temas %}
+        <li>{{elteme}}</li>
+
+       {% endfor %}
+        </ul>
+
+    </body>
+    </html>
